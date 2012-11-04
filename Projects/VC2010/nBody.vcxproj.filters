@@ -18,13 +18,13 @@
     <ClCompile Include="..\..\Source\Environment\VC2010\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Startup.c">
+    <ClCompile Include="..\..\Source\Skeleton\Skeleton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Source\CUDA\Interactions.cu">
-      <Filter>Source Files</Filter>
-    </None>
+    <ClInclude Include="..\..\Source\Skeleton\Skeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

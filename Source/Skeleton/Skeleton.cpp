@@ -1,7 +1,8 @@
 //--------------------------------------------------------------------------
+//
 // nBody -v1.0
 //
-// Copyright (c) 2012, Mariusz Moczala
+// Copyright (c) 2012, Mariusz Moczala and Tomasz Stachowiak
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -27,8 +28,68 @@
 // OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
 //--------------------------------------------------------------------------
 
-// ...
 
+//--------------------------------------------------------------------------
+// Includes
+//--------------------------------------------------------------------------
+
+#include "Skeleton.h"
+
+
+//--------------------------------------------------------------------------
+CSkeleton::CSkeleton()
+{
+  // ...
+}
+//--------------------------------------------------------------------------
+CSkeleton::~CSkeleton()
+{
+  // ...
+}
+//--------------------------------------------------------------------------
+CSkeleton & CSkeleton::GetInstance()
+{
+  // Create instance of this object
+  static CSkeleton This;
+  return This;
+}
+//--------------------------------------------------------------------------
+void CSkeleton::PreInit()
+{
+  // ...
+}
+//--------------------------------------------------------------------------
+void CSkeleton::PostInit()
+{
+  // ...
+}
+//--------------------------------------------------------------------------
+void CSkeleton::PreDeinit()
+{
+  // ...
+}
+//--------------------------------------------------------------------------
+void CSkeleton::PostDeinit()
+{
+  // ...
+}
+//--------------------------------------------------------------------------
+CSkeleton::ERunMode CSkeleton::Run()
+{
+  // By default, wait for messages before continuing processing
+  CSkeleton::ERunMode RunMode = rmGoForIdle;
+
+  // ...
+
+  // Return chosen run mode
+  return rmGoForIdle;
+}
+//--------------------------------------------------------------------------
+void CSkeleton::Resize(int Width, int Height)
+{
+  // ...
+}
 //--------------------------------------------------------------------------

@@ -1,7 +1,8 @@
 //--------------------------------------------------------------------------
+//
 // nBody -v1.0
 //
-// Copyright (c) 2012, Mariusz Moczala
+// Copyright (c) 2012, Mariusz Moczala and Tomasz Stachowiak
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -27,8 +28,33 @@
 // OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
 //--------------------------------------------------------------------------
 
-// ...
+class CSkeleton
+{
+  private:
+
+    CSkeleton();
+    CSkeleton(const CSkeleton &);
+    CSkeleton & operator = (const CSkeleton &);
+
+    CSkeleton & GetInstance();
+
+
+  public:
+
+    enum ERunMode { rmExit, rmContinue, rmRepeat, rmGoForIdle };
+
+    ~CSkeleton();
+
+    static void PreInit();
+    static void PostInit();
+    static void PreDeinit();
+    static void PostDeinit();
+    static ERunMode Run();
+    static void Resize(int Width, int Height);
+};
+
 
 //--------------------------------------------------------------------------

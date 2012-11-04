@@ -1,4 +1,4 @@
-RoboSoccer -v1.0
+nBody -v1.0
 
 Copyright (c) 2012, Mariusz Moczala and Tomasz Stachowiak
 All rights reserved.
