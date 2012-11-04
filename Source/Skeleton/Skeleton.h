@@ -31,6 +31,11 @@
 //
 //--------------------------------------------------------------------------
 
+
+//--------------------------------------------------------------------------
+#ifndef SKELETON_H
+#define SKELETON_H
+//--------------------------------------------------------------------------
 class CSkeleton
 {
   private:
@@ -44,7 +49,7 @@ class CSkeleton
 
   public:
 
-    enum ERunMode { rmExit, rmContinue, rmRepeat, rmGoForIdle };
+    enum ERunMode { rmExit, rmRepeat, rmContinue, rmGoForIdle };
 
     ~CSkeleton();
 
@@ -55,6 +60,6 @@ class CSkeleton
     static ERunMode Run();
     static void Resize(int Width, int Height);
 };
-
-
+//--------------------------------------------------------------------------
+#endif
 //--------------------------------------------------------------------------

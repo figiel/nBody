@@ -202,13 +202,13 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
           SendMessage(hWnd, WM_CLOSE, NULL, NULL);
           break;
 
-        // Process all messages and continue execution
-        case CSkeleton::rmContinue:
-          break;
-
         // Repet without processing any massages
         case CSkeleton::rmRepeat:
           Repeat = true;
+          break;
+
+        // Process all messages and continue execution
+        case CSkeleton::rmContinue:
           break;
 
         // Wait for messages and then continue
@@ -219,6 +219,9 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
       if(Repeat)
         continue;
+
+      // Swap graphics
+      SwapBuffers(DC);
     }
 
     // Process all available messages

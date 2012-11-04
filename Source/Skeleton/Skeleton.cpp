@@ -33,21 +33,17 @@
 
 
 //--------------------------------------------------------------------------
-// Includes
-//--------------------------------------------------------------------------
-
 #include "Skeleton.h"
-
-
+#include "..\World\World.h"
+#include "..\Physics\Physics.h"
+#include "..\Graphics\Graphics.h"
 //--------------------------------------------------------------------------
 CSkeleton::CSkeleton()
 {
-  // ...
 }
 //--------------------------------------------------------------------------
 CSkeleton::~CSkeleton()
 {
-  // ...
 }
 //--------------------------------------------------------------------------
 CSkeleton & CSkeleton::GetInstance()
@@ -59,37 +55,61 @@ CSkeleton & CSkeleton::GetInstance()
 //--------------------------------------------------------------------------
 void CSkeleton::PreInit()
 {
-  // ...
+  // Modules pre-initialization
+  CWorld::PreInit();
+  CPhysics::PreInit();
+  CGraphics::PreInit();
 }
 //--------------------------------------------------------------------------
 void CSkeleton::PostInit()
 {
-  // ...
+  // Modules post-initialization
+  CWorld::PostInit();
+  CPhysics::PostInit();
+  CGraphics::PostInit();
 }
 //--------------------------------------------------------------------------
 void CSkeleton::PreDeinit()
 {
-  // ...
+  // Modules pre-deinitialization
+  CWorld::PreDeinit();
+  CPhysics::PreDeinit();
+  CGraphics::PreDeinit();
 }
 //--------------------------------------------------------------------------
 void CSkeleton::PostDeinit()
 {
-  // ...
+  // Modules post-deinitialization
+  CWorld::PostDeinit();
+  CPhysics::PostDeinit();
+  CGraphics::PostDeinit();
 }
 //--------------------------------------------------------------------------
 CSkeleton::ERunMode CSkeleton::Run()
 {
   // By default, wait for messages before continuing processing
-  CSkeleton::ERunMode RunMode = rmGoForIdle;
+  ERunMode Mode, RunMode = rmGoForIdle;
 
-  // ...
+  // Chose mode with highest priority of all run modes
+  Mode = CWorld::Run();
+  if(RunMode > Mode)
+    RunMode = Mode;
 
-  // Return chosen run mode
-  return rmGoForIdle;
+  Mode = CPhysics::Run();
+  if(RunMode > Mode)
+    RunMode = Mode;
+
+  Mode = CGraphics::Run();
+  if(RunMode > Mode)
+    RunMode = Mode;
+
+  // Return chosen mode
+  return RunMode;
 }
 //--------------------------------------------------------------------------
 void CSkeleton::Resize(int Width, int Height)
 {
-  // ...
+  // Modules resize
+  CGraphics::Resize(Width, Height);
 }
 //--------------------------------------------------------------------------
