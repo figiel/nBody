@@ -36,7 +36,7 @@
 #ifndef PHYSICS_H
 #define PHYSICS_H
 //--------------------------------------------------------------------------
-#include "..\Skeleton\Skeleton.h"
+#include "../Skeleton/Skeleton.h"
 //--------------------------------------------------------------------------
 class CPhysics
 {

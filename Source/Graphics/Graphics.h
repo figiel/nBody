@@ -36,11 +36,10 @@
 #ifndef GRAPHICS_H
 #define GRAPHICS_H
 //--------------------------------------------------------------------------
-#include "..\Skeleton\Skeleton.h"
+#include "../Skeleton/Skeleton.h"
 
-#include <windows.h>
-#include <gl\gl.h>
-#include <gl\glu.h>
+#include <GL/gl.h>
+#include <GL/glu.h>
 //--------------------------------------------------------------------------
 class CGraphics
 {

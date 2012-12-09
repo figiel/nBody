@@ -34,9 +34,9 @@
 
 //--------------------------------------------------------------------------
 #include "Skeleton.h"
-#include "..\World\World.h"
-#include "..\Physics\Physics.h"
-#include "..\Graphics\Graphics.h"
+#include "../World/World.h"
+#include "../Physics/Physics.h"
+#include "../Graphics/Graphics.h"
 //--------------------------------------------------------------------------
 CSkeleton::CSkeleton()
 {

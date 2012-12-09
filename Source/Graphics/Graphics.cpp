@@ -34,8 +34,8 @@
 
 //--------------------------------------------------------------------------
 #include "Graphics.h"
-#include "..\World\World.h"
-#include "..\Math\Vector.h"
+#include "../World/World.h"
+#include "../Math/Vector.h"
 //--------------------------------------------------------------------------
 CGraphics::CGraphics()
 {

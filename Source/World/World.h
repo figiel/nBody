@@ -36,8 +36,8 @@
 #ifndef WORLD_H
 #define WORLD_H
 //--------------------------------------------------------------------------
-#include "..\Skeleton\Skeleton.h"
-#include "..\Math\Vector.h"
+#include "../Skeleton/Skeleton.h"
+#include "../Math/Vector.h"
 //--------------------------------------------------------------------------
 #define WORLD_NUMBER_OF_BODIES 10
 //--------------------------------------------------------------------------
